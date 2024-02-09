@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0"
+            prefWidth="375.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="weather.Controller">
+    <children>
+        <Pane onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="667.0" prefWidth="375.0">
+            <children>
+                <ImageView fx:id="backgroundImage" fitHeight="667.0" fitWidth="375.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/backgroundDayResized.png"/>
+                    </image>
+                    <rotationAxis>
+                        <Point3D/>
+                    </rotationAxis>
+                </ImageView>
+      
+                <Label fx:id="localization" alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="42.0"
+                       prefHeight="54.0" prefWidth="170.0" text="location" textAlignment="CENTER" textFill="#f0f0f0">
+                    <font>
+                        <Font size="37.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="datum" layoutX="111.0" layoutY="83.0" prefHeight="25.0" prefWidth="154.0"
+                       text=" 12.05.2020 / 14:00" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="temp" alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="237.0" text="12"
+                       textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="46.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="feel" alignment="CENTER" layoutX="104.0" layoutY="293.0" prefHeight="25.0"
+                       prefWidth="143.0" text="Pocit ako: 20" textFill="WHITE">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                
+                <Label alignment="CENTER_LEFT" layoutX="20.0" layoutY="350.0" prefHeight="25.0"
+                       prefWidth="143.0" text="DAY 2" textFill="WHITE">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                
+                <Label alignment="CENTER" layoutX="70.0" layoutY="350.0" prefHeight="25.0"
+                       prefWidth="143.0" text="DAY 3" textFill="WHITE">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                
+                <Label alignment="CENTER" layoutX="160.0" layoutY="350.0" prefHeight="25.0"
+                       prefWidth="143.0" text="DAY 4" textFill="WHITE">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                
+                <Label alignment="CENTER_RIGHT" layoutX="210.0" layoutY="350.0" prefHeight="25.0"
+                       prefWidth="143.0" text="DAY 5" textFill="WHITE">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                
+                
+                 <Label fx:id="fore2" alignment="CENTER_LEFT" layoutX="20.0" layoutY="400.0" prefHeight="25.0"
+                       prefWidth="143.0" textFill="WHITE">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                
+                <Label fx:id="fore3" alignment="CENTER" layoutX="70.0" layoutY="400.0" prefHeight="25.0"
+                       prefWidth="143.0" textFill="WHITE">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                
+                <Label fx:id="fore4" alignment="CENTER" layoutX="160.0" layoutY="400.0" prefHeight="25.0"
+                       prefWidth="143.0" textFill="WHITE">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                
+                <Label fx:id="fore5" alignment="CENTER_RIGHT" layoutX="210.0" layoutY="400.0" prefHeight="25.0"
+                       prefWidth="143.0" textFill="WHITE">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                
+                <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="77.0" layoutY="52.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/location.png"/>
+                    </image>
+                </ImageView>
+                
+                <ImageView fitHeight="90.0" fitWidth="41.0" layoutX="14.0" layoutY="566.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/sunrise.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="92.0" fitWidth="41.0" layoutX="14.0" layoutY="612.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/sunset.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="14.0" layoutY="484.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/clouds.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="134.0" layoutY="612.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/humidity2.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="54.0" fitWidth="41.0" layoutX="236.0" layoutY="612.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/pressure.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="14.0" layoutY="525.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/wind.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fx:id="weatherInfoImage" fitHeight="100.0" fitWidth="120.0" layoutX="212.0" layoutY="438.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/sunny.png"/>
+                    </image>
+                </ImageView>
+                <Label fx:id="weatherInfo" alignment="CENTER" layoutX="185.0" layoutY="544.0" prefHeight="33.0"
+                       prefWidth="154.0" text="Slnečno" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="22.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="cloudsPercentage" alignment="CENTER" layoutX="55.0" layoutY="488.0" prefHeight="33.0"
+                       prefWidth="52.0" text="20%" textFill="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="windSpeed" contentDisplay="CENTER" layoutX="63.0" layoutY="530.0" text="30 m/s"
+                       textFill="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="sunRise" contentDisplay="CENTER" layoutX="63.0" layoutY="570.0" prefHeight="33.0"
+                       prefWidth="61.0" text="05:40" textFill="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="sunSet" contentDisplay="CENTER" layoutX="63.0" layoutY="616.0" prefHeight="33.0"
+                       prefWidth="61.0" text="17:40" textFill="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="humidity" layoutX="178.0" layoutY="616.0" prefHeight="33.0" prefWidth="61.0" text="20%"
+                       textFill="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="pressure" layoutX="285.0" layoutY="617.0" text="1020 hPa" textFill="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="355.0" layoutY="-1.0" onMouseClicked="#close"
+                       text="X" textFill="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="336.0" layoutY="-1.0"
+                       onMouseClicked="#minimize" text="_" textFill="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <ImageView fx:id="weatherCity" fitHeight="41.0" fitWidth="33.0" layoutX="8.0" layoutY="8.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/building.png"/>
+                    </image>
+                </ImageView>
+                <TextField fx:id="cityInput" layoutX="50.0" layoutY="16.0"/>
+                <ImageView fx:id="accept" fitHeight="25.0" fitWidth="41.0" layoutX="208.0" layoutY="16.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/accept.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fx:id="cancel" fitHeight="30.0" fitWidth="25.0" layoutX="241.0" layoutY="16.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/cancel.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fx:id="refresh" fitHeight="25.0" fitWidth="25.0" layoutX="300.0" layoutY="4.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/refresh.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
